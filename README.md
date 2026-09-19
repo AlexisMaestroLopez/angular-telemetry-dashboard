@@ -23,22 +23,6 @@ Panel de control e interacción con telemetría en tiempo real para maquinaria i
 
 ---
 
-## Instalación y Ejecución Local
-
-1. Clonar el repositorio:
-   git clone https://github.com/TU_USUARIO/actia-telemetry-dashboard.git
-   cd actia-telemetry-dashboard
-
-2. Instalar dependencias:
-   npm install
-
-3. Iniciar servidor de desarrollo:
-   npx ng serve
-
-4. Abrir el navegador e ir a http://localhost:4200/.
-
----
-
 ## Autor
 
 Alexis Maestro López  

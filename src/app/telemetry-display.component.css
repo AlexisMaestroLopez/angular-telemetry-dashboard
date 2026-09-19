@@ -1,0 +1,55 @@
+.telemetry-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.telemetry-card h3 {
+    margin-top: 0;
+    color: #1e293b;
+    font-size: 16px;
+}
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.led {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.led.running { background-color: #22c55e; box-shadow: 0 0 8px #22c55e; }
+.led.stopped { background-color: #94a3b8; }
+.led.error { background-color: #ef4444; box-shadow: 0 0 8px #ef4444; }
+
+.metrics {
+    display: flex;
+    gap: 15px;
+}
+.metric-box {
+    flex: 1;
+    background-color: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    font-size: 12px;
+    color: #64748b;
+}
+.value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0f172a;
+    margin-top: 4px;
+}
+.value.warning {
+    color: #dc2626;
+}

@@ -1,0 +1,24 @@
+<div class="telemetry-card">
+    <h3>Monitor de Telemetría</h3>
+    
+    <!-- Indicador de Estado LED -->
+    <div class="status-container">
+        <span class="led" [ngClass]="data.status.toLowerCase()"></span>
+        <span class="status-text">Estado: {{ data.status }}</span>
+    </div>
+
+    <!-- Métricas en tiempo real -->
+    <div class="metrics">
+        <div class="metric-box">
+            <span class="label">Temperatura</span>
+            <span class="value" [class.warning]="data.temperature > 80">
+                {{ data.temperature }} ºC
+            </span>
+        </div>
+
+        <div class="metric-box">
+            <span class="label">Velocidad</span>
+            <span class="value">{{ data.rpm }} RPM</span>
+        </div>
+    </div>
+</div>

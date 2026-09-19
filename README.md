@@ -1,59 +1,45 @@
-# ActiaTelemetry
+# ACTIA Systems - Real-Time Industrial Telemetry Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+Panel de control e interacción con telemetría en tiempo real para maquinaria industrial, desarrollado como solución a la prueba técnica de evaluación para ACTIA Systems.
 
-## Development server
+---
 
-To start a local development server, run:
+## Características Principales
 
-```bash
-ng serve
-```
+- Monitoreo en Tiempo Real: Simulación y visualización continua de parámetros industriales (Temperatura y RPM).
+- Gestión de Estados de Maquinaria: Soporte para estados RUNNING, STOPPED y ERROR con indicadores LED dinámicos.
+- Protocolos e Invariantes de Seguridad: Apagado automático de la máquina e indicación visual de fallo cuando la temperatura supera el umbral de seguridad (> 85 ºC).
+- Interfaz Interactiva: Panel de control con habilitación/deshabilitación reactiva de acciones según el estado actual del sistema.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Arquitectura y Decisiones Técnicas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Angular Standalone Architecture: Arquitectura modular moderna basada en componentes independientes sin NgModules.
+- Estructura de Archivos Limpia: Separación estricta de responsabilidades en archivos dedicados (.ts, .html, .css) por componente (ControlPanelComponent y TelemetryDisplayComponent).
+- Manejo de Estado Reactivo con RxJS: Uso de BehaviorSubject y Observable en MachineService para la gestión centralizada y desacoplada del estado del sistema.
+- Interoperabilidad RxJS <-> Signals: Implementación del puente toSignal() (@angular/core/rxjs-interop) en el componente principal para una gestión de cambios eficiente compatible con entornos Zoneless.
+- Inyección de Dependencias Moderna: Uso de inject() a nivel de campo según las mejores prácticas actuales de Angular.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Instalación y Ejecución Local
 
-```bash
-ng generate --help
-```
+1. Clonar el repositorio:
+   git clone https://github.com/TU_USUARIO/actia-telemetry-dashboard.git
+   cd actia-telemetry-dashboard
 
-## Building
+2. Instalar dependencias:
+   npm install
 
-To build the project run:
+3. Iniciar servidor de desarrollo:
+   npx ng serve
 
-```bash
-ng build
-```
+4. Abrir el navegador e ir a http://localhost:4200/.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## Autor
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Alexis Maestro López  
+Estudiante de Ingeniería Informática — Universidad Rey Juan Carlos (URJC)
